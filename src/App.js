@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchCartData());
-  },[dispatch]);
+  }, [dispatch]);
 
   useEffect(() => {
     // const sendCartData = async () => {
@@ -60,7 +60,6 @@ function App() {
     //   }));
     // });
     if (cart.changed) dispatch(sendCartData(cart));
-
   }, [cart, dispatch]);
 
   return (
@@ -77,7 +76,6 @@ function App() {
         <Products />
       </Layout>
     </Fragment>
-
   );
 }
 
